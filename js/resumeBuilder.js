@@ -1,9 +1,9 @@
-// Initial variables
+// Bio
 var bio = {
   name: "Vladimir Bojovic",
   role: "Web Developer",
   contacts: {
-    mobile: "065-555-5555",
+    mobile: "065-333-5555",
     email: "john@example.com",
     github: "VladTzaru",
     twitter: "@vladimir",
@@ -13,15 +13,77 @@ var bio = {
   skills: ["html", "css", "js", "git", "angular", "jquery"],
   bioPic: "images/Vladimir.jpeg"
 };
-console.log(bio);
 
+// Work experience
+var work = {
+  jobs: [
+    {
+      employer: "Tegetlab",
+      title: "Frontend Developer",
+      location: "Belgrade",
+      dates: 2016,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
+    },
+    {
+      employer: "Academica",
+      title: "Assistant Program Director",
+      location: "Belgrade",
+      dates: 2016,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
+    }
+  ]
+};
 
-// Formatted variables
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+// Projects
+var projects = {
+  projects: [
+    {
+      title: "Taqoo",
+      dates: 2016,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      images: [
+        "http://images.huffingtonpost.com/2016-06-25-1466835058-3172856-DKCWebDesignBanner.jpg",
+        "https://image.freepik.com/free-photo/web-design-concept-with-drawings_1134-77.jpg"
+      ]
+    },
+    {
+      title: "Tegetlab",
+      dates: 2016,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      images: [
+        "http://images.huffingtonpost.com/2016-06-25-1466835058-3172856-DKCWebDesignBanner.jpg",
+        "https://image.freepik.com/free-photo/web-design-concept-with-drawings_1134-77.jpg"
+      ]
+    }
+  ]
+};
 
-
-
-// Appending
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+// Education
+var education = {
+  schools: [
+    {
+      name: "Faculty of Technical Sciences - FTN Novi Sad",
+      city: "Cacak",
+      degree: "Masters",
+      majors: ["E-bussiness", "Online marketing"],
+      dates: 2012,
+      url: "http://www.uns.ac.rs/index.php/en/faculties/ffaculties/faculty-technical-sciences"
+    },
+    {
+      name: "Faculty of Technical Sciences - FTN Cacak",
+      city: "Cacak",
+      degree: "BA",
+      majors: ["Management", "English"],
+      dates: 2009,
+      url: "http://www.ftn.kg.ac.rs/en/"
+    }
+  ],
+  onlineCourses: [
+    {
+      title: "Frontend Nanodegree",
+      school: "Udacity",
+      dates: 2017,
+      url: "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+    }
+  ]
+};
