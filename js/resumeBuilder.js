@@ -87,3 +87,31 @@ var education = {
     }
   ]
 };
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+//FUNCTIONS AND STUFF
+////////////////////////////////////////////////////////////////////////////////////////
+
+//Formatted variables
+var formattedEmployer,
+    formattedTitle,
+    formattedEmployerTitle,
+    formattedName,
+    formattedRole;
+
+
+formattedName = HTMLheaderName.replace("%data%", bio.name);
+$("#header").prepend(formattedName);
+formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").append(formattedRole);
+
+for (var key in work.jobs) {
+  if (work.jobs.hasOwnProperty(key)) {
+    $("#workExperience").append(HTMLworkStart);
+    formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
+    formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[0].title);
+    formattedEmployerTitle = formattedEmployer + formattedTitle;
+    $(".work-entry:last").append(formattedEmployerTitle);
+  }
+}
