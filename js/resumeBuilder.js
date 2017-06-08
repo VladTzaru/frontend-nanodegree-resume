@@ -14,6 +14,13 @@ var bio = {
   bioPic: "images/fry.jpg"
 };
 
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+$("#header").append(formattedName);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").append(formattedRole);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(formattedBioPic);
+
 
 // Education
 var education = {
@@ -64,6 +71,21 @@ var work = {
   ]
 };
 
+// Loop to list all jobs and append them
+
+
+
+
+// for (var job in work.jobs) {
+//   if (work.jobs.hasOwnProperty(job)) {
+//     $("#workExperience").append(HTMLworkStart);
+//     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+//     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+//     var formattedEmployerTitle = formattedEmployer + formattedTitle;
+//     $(".work-entry:last").append(formattedEmployerTitle);
+//   }
+// }
+
 
 // Projects
 var projects = {
@@ -84,3 +106,17 @@ var projects = {
 ////////////////////////////////////////////////////////////////////////////////////////
 //FUNCTIONS AND STUFF
 ////////////////////////////////////////////////////////////////////////////////////////
+
+// Adding skills to the page from the bio object
+if (bio.skills.length > 0) {
+  $("#header").append(HTMLskillsStart);
+}
+
+var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+$("#skills").append(formattedSkill);
+formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+$("#skills").append(formattedSkill);
+formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+$("#skills").append(formattedSkill);
+formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+$("#skills").append(formattedSkill);
