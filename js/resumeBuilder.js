@@ -73,7 +73,13 @@ var work = {
 
 // Loop to list all jobs and append them
 
-
+for (var job = 0; job < work.jobs.length; job++) {
+  $("#workExperience").append(HTMLworkStart);
+  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+  var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+  var formattedEmployerTitle = formattedEmployer + formattedTitle;
+  $(".work-entry:last").append(formattedEmployerTitle);
+}
 
 
 // for (var job in work.jobs) {
