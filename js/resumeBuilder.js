@@ -89,11 +89,6 @@ var work = {
 
 work.displayWork();
 
-
-
-
-
-
 // for (var job in work.jobs) {
 //   if (work.jobs.hasOwnProperty(job)) {
 //     $("#workExperience").append(HTMLworkStart);
@@ -113,28 +108,56 @@ var projects = {
       dates: 2016,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       images: [
-        "http://images.huffingtonpost.com/2016-06-25-1466835058-3172856-DKCWebDesignBanner.jpg",
-        "https://image.freepik.com/free-photo/web-design-concept-with-drawings_1134-77.jpg"
+        "images/droid_flat_500_small.png",
+        "images/photoshop_500_small.jpg"
+      ]
+    },
+    {
+      title: "Taqoo",
+      dates: 2016,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      images: [
+        "images/phone_flat_500_small.jpg",
       ]
     }
-  ]
+  ],
+  display: function() {
+    for(var project = 0; project < projects.projects.length; project++) {
+      $("#projects").append(HTMLprojectStart);
+
+      var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+      $(".project-entry:last").append(formattedTitle);
+
+      var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+      $(".project-entry:last").append(formattedDates);
+
+      var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+      $(".project-entry:last").append(formattedDescription);
+
+      //Checks the images array and iterates over it
+      if(projects.projects[project].images.length > 0) {
+        for(var img = 0; img < projects.projects[project].images.length; img++) {
+          var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[img]);
+          $(".project-entry:last").append(formattedImages);
+        }
+      }
+    }
+  }
 };
 
+projects.display();
+
 
 ////////////////////////////////////////////////////////////////////////////////////////
-//FUNCTIONS AND STUFF
+// Functions
 ////////////////////////////////////////////////////////////////////////////////////////
+$("#main").append(internationalizeButton);
 
-// Adding skills to the page from the bio object
-if (bio.skills.length > 0) {
-  $("#header").append(HTMLskillsStart);
+// Function for internationalize
+function inName(name) {
+  name = name.split(" ");
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
+  name = name.join(" ");
+  return name;
 }
-
-var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-$("#skills").append(formattedSkill);
