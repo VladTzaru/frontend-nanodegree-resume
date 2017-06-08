@@ -45,6 +45,11 @@ var education = {
   ]
 };
 
+var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[0].name);
+console.log(formattedSchoolName);
+$("#main").append(formattedSchoolName);
+
+
 
 // Work
 var work = {
@@ -63,6 +68,9 @@ var work = {
     }
   ]
 };
+
+var formattedWorkRole = HTMLworkTitle.replace("%data%", work["jobs"][0]["title"]);
+$("#main").append(formattedWorkRole);
 
 
 // Projects
@@ -83,3 +91,15 @@ var projects = {
 ////////////////////////////////////////////////////////////////////////////////////////
 //FUNCTIONS AND STUFF
 ////////////////////////////////////////////////////////////////////////////////////////
+
+var awesomeThoughts = "I am Rada and I am awesome!";
+
+var funThoughts = awesomeThoughts.replace("awesome", "FUN");
+
+var skils = ["awesomeness", "js", "inDaAssing"];
+
+var formattedName = HTMLheaderName.replace("%data%", "Rada Palibrk");
+var formattedRole = HTMLheaderRole.replace("%data%", "Bog i batina");
+
+$("#header").append(formattedName);
+$("#header").append(formattedRole);
