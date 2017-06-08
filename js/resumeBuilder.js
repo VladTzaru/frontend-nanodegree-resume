@@ -1,76 +1,33 @@
 // Bio
 var bio = {
-  name: "Vladimir Bojovic",
-  role: "Web Developer",
+  name: "Ankou Vesta",
+  role: "Frontend developer",
   contacts: {
-    mobile: "065-333-5555",
-    email: "john@example.com",
+    mobile: "065-555-3333",
+    email: "name@example.com",
     github: "VladTzaru",
     twitter: "@vladimir",
     location: "Novi Sad"
   },
-  welcomeMessage: "Welcome to my resume!",
-  skills: ["html", "css", "js", "git", "angular", "jquery"],
-  bioPic: "images/Vladimir.jpeg"
+  welcomeMessage: "Lorem ipsum dolor sit amet.",
+  skills: ["sleeping", "eating", "drinking", "other"],
+  bioPic: "images/fry.jpg"
 };
 
-// Work experience
-var work = {
-  jobs: [
-    {
-      employer: "Tegetlab",
-      title: "Frontend Developer",
-      location: "Belgrade",
-      dates: 2016,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
-    },
-    {
-      employer: "Academica",
-      title: "Assistant Program Director",
-      location: "Belgrade",
-      dates: 2016,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
-    }
-  ]
-};
-
-// Projects
-var projects = {
-  projects: [
-    {
-      title: "Taqoo",
-      dates: 2016,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      images: [
-        "http://images.huffingtonpost.com/2016-06-25-1466835058-3172856-DKCWebDesignBanner.jpg",
-        "https://image.freepik.com/free-photo/web-design-concept-with-drawings_1134-77.jpg"
-      ]
-    },
-    {
-      title: "Tegetlab",
-      dates: 2016,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      images: [
-        "http://images.huffingtonpost.com/2016-06-25-1466835058-3172856-DKCWebDesignBanner.jpg",
-        "https://image.freepik.com/free-photo/web-design-concept-with-drawings_1134-77.jpg"
-      ]
-    }
-  ]
-};
 
 // Education
 var education = {
   schools: [
     {
-      name: "Faculty of Technical Sciences - FTN Novi Sad",
-      city: "Cacak",
+      name: "Faculty of Tehnical Sciences - FTN Novi Sad",
+      city: "Novi Sad",
       degree: "Masters",
-      majors: ["E-bussiness", "Online marketing"],
+      majors: ["E-biz", "Online marketing"],
       dates: 2012,
       url: "http://www.uns.ac.rs/index.php/en/faculties/ffaculties/faculty-technical-sciences"
     },
     {
-      name: "Faculty of Technical Sciences - FTN Cacak",
+      name: "Faculty of Tehnical Sciences - FTN Cacak",
       city: "Cacak",
       degree: "BA",
       majors: ["Management", "English"],
@@ -89,29 +46,47 @@ var education = {
 };
 
 
+// Work
+var work = {
+  jobs: [
+    {
+      employer: "Tegetlab",
+      title: "Frontend Developer",
+      dates: "May 2016 - May 2017",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
+    },
+    {
+      employer: "Academica",
+      title: "Assistant program director",
+      dates: "Jan 2009- Jan 2011",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
+    }
+  ]
+};
+
+
+// Projects
+var projects = {
+  projects: [
+    {
+      title: "PhiProject",
+      dates: 2016,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      images: [
+        "http://images.huffingtonpost.com/2016-06-25-1466835058-3172856-DKCWebDesignBanner.jpg",
+        "https://image.freepik.com/free-photo/web-design-concept-with-drawings_1134-77.jpg"
+      ]
+    }
+  ]
+};
 ////////////////////////////////////////////////////////////////////////////////////////
 //FUNCTIONS AND STUFF
 ////////////////////////////////////////////////////////////////////////////////////////
 
 //Formatted variables
-var formattedEmployer,
-    formattedTitle,
-    formattedEmployerTitle,
-    formattedName,
-    formattedRole;
 
 
-formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
-formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").append(formattedRole);
-
-for (var key in work.jobs) {
-  if (work.jobs.hasOwnProperty(key)) {
-    $("#workExperience").append(HTMLworkStart);
-    formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
-    formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[0].title);
-    formattedEmployerTitle = formattedEmployer + formattedTitle;
-    $(".work-entry:last").append(formattedEmployerTitle);
-  }
-}
