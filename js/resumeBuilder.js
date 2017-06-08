@@ -77,8 +77,10 @@ for (var job = 0; job < work.jobs.length; job++) {
   $("#workExperience").append(HTMLworkStart);
   var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
   var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-  var formattedEmployerTitle = formattedEmployer + formattedTitle;
-  $(".work-entry:last").append(formattedEmployerTitle);
+  var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+  var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+  var formattedJobs = formattedEmployer + formattedTitle + formattedDates + formattedDescription;
+  $(".work-entry:last").append(formattedJobs);
 }
 
 
