@@ -84,6 +84,7 @@ var projects = {
 ////////////////////////////////////////////////////////////////////////////////////////
 //FUNCTIONS AND STUFF
 ////////////////////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
 
 
 //Formatted variables
@@ -91,3 +92,5 @@ var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").append(formattedRole);
+=======
+>>>>>>> development
