@@ -11,16 +11,18 @@ var bio = {
   },
   welcomeMessage: "Lorem ipsum dolor sit amet.",
   skills: ["sleeping", "eating", "drinking", "other"],
-  bioPic: "images/fry.jpg"
+  bioPic: "images/fry.jpg",
+  displayBio: function(obj) {
+    var formattedName = HTMLheaderName.replace("%data%", obj.name),
+    formattedRole = HTMLheaderRole.replace("%data%", obj.role),
+    formattedBioPic = HTMLbioPic.replace("%data%", obj.bioPic),
+    formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", obj.welcomeMessage),
+    bio = formattedName + formattedRole + formattedBioPic + formattedWelcomeMsg;
+    return $("#header").append(bio);
+  }
 };
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").append(formattedName);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").append(formattedRole);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(formattedBioPic);
-
+bio.displayBio(bio);
 
 // Education
 var education = {
