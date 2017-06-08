@@ -12,17 +12,18 @@ var bio = {
   welcomeMessage: "Lorem ipsum dolor sit amet.",
   skills: ["sleeping", "eating", "drinking", "other"],
   bioPic: "images/fry.jpg",
-  displayBio: function(obj) {
-    var formattedName = HTMLheaderName.replace("%data%", obj.name),
-    formattedRole = HTMLheaderRole.replace("%data%", obj.role),
-    formattedBioPic = HTMLbioPic.replace("%data%", obj.bioPic),
-    formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", obj.welcomeMessage),
-    bio = formattedName + formattedRole + formattedBioPic + formattedWelcomeMsg;
-    return $("#header").append(bio);
+  displayBio: function() {
+    var formattedName = HTMLheaderName.replace("%data%", bio.name),
+    formattedRole = HTMLheaderRole.replace("%data%", bio.role),
+    formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic),
+    formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+    formattedBio = formattedName + formattedRole + formattedBioPic + formattedWelcomeMsg;
+    return $("#header").append(formattedBio);
   }
 };
 
-bio.displayBio(bio);
+bio.displayBio();
+
 
 // Education
 var education = {
@@ -70,20 +71,27 @@ var work = {
       dates: "Jan 2009- Jan 2011",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
     }
-  ]
+  ],
+  displayWork: function(obj) {
+    var output;
+    for (var job = 0; job < work.jobs.length; job++) {
+      $("#workExperience").append(HTMLworkStart);
+      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
+      formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
+      formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates),
+      formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
+      formattedJobs = formattedEmployer + formattedTitle + formattedDates + formattedDescription;
+      output = $(".work-entry:last").append(formattedJobs);
+    }
+    return output;
+  }
 };
 
-// Loop to list all jobs and append them
+work.displayWork();
 
-for (var job = 0; job < work.jobs.length; job++) {
-  $("#workExperience").append(HTMLworkStart);
-  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-  var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-  var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-  var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-  var formattedJobs = formattedEmployer + formattedTitle + formattedDates + formattedDescription;
-  $(".work-entry:last").append(formattedJobs);
-}
+
+
+
 
 
 // for (var job in work.jobs) {
