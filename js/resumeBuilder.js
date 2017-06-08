@@ -11,8 +11,18 @@ var bio = {
   },
   welcomeMessage: "Lorem ipsum dolor sit amet.",
   skills: ["sleeping", "eating", "drinking", "other"],
-  bioPic: "images/fry.jpg"
+  bioPic: "images/fry.jpg",
+  displayBio: function() {
+    var formattedName = HTMLheaderName.replace("%data%", bio.name),
+    formattedRole = HTMLheaderRole.replace("%data%", bio.role),
+    formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic),
+    formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+    formattedBio = formattedName + formattedRole + formattedBioPic + formattedWelcomeMsg;
+    return $("#header").append(formattedBio);
+  }
 };
+
+bio.displayBio();
 
 
 // Education
@@ -61,8 +71,33 @@ var work = {
       dates: "Jan 2009- Jan 2011",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
     }
-  ]
+  ],
+  displayWork: function(obj) {
+    var output;
+    for (var job = 0; job < work.jobs.length; job++) {
+      $("#workExperience").append(HTMLworkStart);
+      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
+      formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
+      formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates),
+      formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
+      formattedJobs = formattedEmployer + formattedTitle + formattedDates + formattedDescription;
+      output = $(".work-entry:last").append(formattedJobs);
+    }
+    return output;
+  }
 };
+
+work.displayWork();
+
+// for (var job in work.jobs) {
+//   if (work.jobs.hasOwnProperty(job)) {
+//     $("#workExperience").append(HTMLworkStart);
+//     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+//     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+//     var formattedEmployerTitle = formattedEmployer + formattedTitle;
+//     $(".work-entry:last").append(formattedEmployerTitle);
+//   }
+// }
 
 
 // Projects
@@ -73,14 +108,56 @@ var projects = {
       dates: 2016,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       images: [
-        "http://images.huffingtonpost.com/2016-06-25-1466835058-3172856-DKCWebDesignBanner.jpg",
-        "https://image.freepik.com/free-photo/web-design-concept-with-drawings_1134-77.jpg"
+        "images/droid_flat_500_small.png",
+        "images/photoshop_500_small.jpg"
+      ]
+    },
+    {
+      title: "Taqoo",
+      dates: 2016,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      images: [
+        "images/phone_flat_500_small.jpg",
       ]
     }
-  ]
+  ],
+  display: function() {
+    for(var project = 0; project < projects.projects.length; project++) {
+      $("#projects").append(HTMLprojectStart);
+
+      var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+      $(".project-entry:last").append(formattedTitle);
+
+      var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+      $(".project-entry:last").append(formattedDates);
+
+      var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+      $(".project-entry:last").append(formattedDescription);
+
+      //Checks the images array and iterates over it
+      if(projects.projects[project].images.length > 0) {
+        for(var img = 0; img < projects.projects[project].images.length; img++) {
+          var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[img]);
+          $(".project-entry:last").append(formattedImages);
+        }
+      }
+    }
+  }
 };
 
+projects.display();
+
 
 ////////////////////////////////////////////////////////////////////////////////////////
-//FUNCTIONS AND STUFF
+// Functions
 ////////////////////////////////////////////////////////////////////////////////////////
+$("#main").append(internationalizeButton);
+
+// Function for internationalize
+function inName(name) {
+  name = name.split(" ");
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
+  name = name.join(" ");
+  return name;
+}

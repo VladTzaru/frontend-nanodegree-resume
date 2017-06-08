@@ -73,23 +73,23 @@ $(document).ready(function() {
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in the lesson Flow Control from JavaScript Basics.
 */
-var clickLocations = [];
-
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
-}
-
-$(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-  logClicks(x, y);
-});
+// var clickLocations = [];
+//
+// function logClicks(x,y) {
+//   clickLocations.push(
+//     {
+//       x: x,
+//       y: y
+//     }
+//   );
+//   console.log('x location: ' + x + '; y location: ' + y);
+// }
+//
+// $(document).click(function(loc) {
+//   var x = loc.pageX;
+//   var y = loc.pageY;
+//   logClicks(x, y);
+// });
 
 
 
