@@ -215,3 +215,7 @@ projects.display();
 //   name = name.join(" ");
 //   return name;
 // }
+
+
+
+// $("#mapDiv").append(googleMap);
