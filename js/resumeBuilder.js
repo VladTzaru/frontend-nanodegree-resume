@@ -53,6 +53,7 @@ var bio = {
 
 bio.display();
 
+
 // Education
 var education = {
   schools: [
@@ -136,32 +137,21 @@ var work = {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
     }
   ],
-  displayWork: function() {
-    var output;
+  display: function() {
     for (var job = 0; job < work.jobs.length; job++) {
       $("#workExperience").append(HTMLworkStart);
+
       var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
-      formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
-      formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates),
-      formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
-      formattedJobs = formattedEmployer + formattedTitle + formattedDates + formattedDescription;
-      output = $(".work-entry:last").append(formattedJobs);
+          formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
+          formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates),
+          formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
+          formattedJobs = formattedEmployer + formattedTitle + formattedDates + formattedDescription;
+          output = $(".work-entry:last").append(formattedJobs);
     }
-    return output;
   }
 };
 
-work.displayWork();
-
-// for (var job in work.jobs) {
-//   if (work.jobs.hasOwnProperty(job)) {
-//     $("#workExperience").append(HTMLworkStart);
-//     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-//     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-//     var formattedEmployerTitle = formattedEmployer + formattedTitle;
-//     $(".work-entry:last").append(formattedEmployerTitle);
-//   }
-// }
+work.display();
 
 
 // Projects
