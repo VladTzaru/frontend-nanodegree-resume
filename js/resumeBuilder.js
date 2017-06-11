@@ -83,7 +83,7 @@ var education = {
     }
   ],
   display: function () {
-    $("#education").append(HTMLschoolStart);
+    $("#education").fadeIn(3000).append(HTMLschoolStart);
     // Loop that iterates over the Schools array
     for(var i = 0; i < education.schools.length; i++) {
       var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name);
@@ -216,6 +216,4 @@ projects.display();
 //   return name;
 // }
 
-
-
-// $("#mapDiv").append(googleMap);
+$("#mapDiv").append(googleMap);
