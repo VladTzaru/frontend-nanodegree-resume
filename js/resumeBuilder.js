@@ -20,20 +20,28 @@ var bio = {
   display: function(){
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").append(formattedName);
+
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("#header").append(formattedRole);
+
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     $("#topContacts").append(formattedMobile);
+
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     $("#topContacts").append(formattedEmail);
+
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts").append(formattedGithub);
+
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedLocation);
+
     var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedWelcomeMessage);
+
     var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
     $("#header").append(formattedBiopic);
+
     // Check is the Skills array empty, if not, iterate over it and append its items.
     if(bio.skills.length > 0) {
       $("#header").append(HTMLskillsStart);
@@ -86,6 +94,8 @@ var education = {
     console.log(education);
   }
 };
+
+education.display();
 
 
 //Work
