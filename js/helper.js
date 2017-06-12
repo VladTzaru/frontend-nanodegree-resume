@@ -48,7 +48,6 @@ var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-var HTMLschoolUrl = '<a href="%data%" target="_blank">Website</a>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
@@ -74,23 +73,21 @@ $(document).ready(function() {
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in the lesson Flow Control from JavaScript Basics.
 */
-// var clickLocations = [];
-//
-// function logClicks(x,y) {
-//   clickLocations.push(
-//     {
-//       x: x,
-//       y: y
-//     }
-//   );
-//   console.log('x location: ' + x + '; y location: ' + y);
-// }
-//
-// $(document).click(function(loc) {
-//   var x = loc.pageX;
-//   var y = loc.pageY;
-//   logClicks(x, y);
-// });
+var clickLocations = [];
+
+function logClicks(x,y) {
+  clickLocations.push(
+    {
+      x: x,
+      y: y
+    }
+  );
+  console.log('x location: ' + x + '; y location: ' + y);
+}
+
+$(document).click(function(loc) {
+  // your code goes here!
+});
 
 
 
@@ -210,7 +207,7 @@ function initializeMap() {
 
     // creates a Google place search service object. PlacesService does the work of
     // actually searching for location data.
-    // var service = new google.maps.places.PlacesService(map);
+    var service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
       locations.forEach(function(place){
@@ -242,11 +239,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-// window.addEventListener('load', initializeMap);
+//window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-// window.addEventListener('resize', function(e) {
-  // Make sure the map bounds get updated on page resize
+//window.addEventListener('resize', function(e) {
+  //Make sure the map bounds get updated on page resize
 //  map.fitBounds(mapBounds);
-// });
+//});
