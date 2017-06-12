@@ -18,7 +18,7 @@ var bio = {
     "jQuery",
     "Git"
   ],
-  biopic: "images/fry.jpg",
+  biopic: "images/cartoon_vlad.jpg",
   display: function(){
     //Header
     var formattedName = HTMLheaderName.replace("%data%", bio.name),
