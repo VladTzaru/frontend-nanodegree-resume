@@ -3,20 +3,21 @@ $("body").hide().fadeIn(1500);
 //Bio
 var bio = {
   name: "Vladimir Bojovic",
-  role: "Frontend Developer",
+  role: "Frontend Developer / Website Designer",
   contacts: {
     mobile: "065-333-222",
     email: "tzaru@example.com",
     github: "VladTzaru",
-    location: "Tristram"
+    location: "Novi Sad"
   },
-  welcomeMessage: "Welcome to my resume page",
+  welcomeMessage: "Welcome to my resume page.",
   skills: [
     "HTML",
     "CSS",
     "JS",
     "jQuery",
-    "Git"
+    "Git",
+    "Adobe Illustrator"
   ],
   biopic: "images/cartoon_vlad.jpg",
   display: function(){

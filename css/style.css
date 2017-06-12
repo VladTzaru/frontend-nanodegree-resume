@@ -34,11 +34,9 @@ h1 {
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
   color: #999;
-  line-height: 29px;
   padding: 10px;
+  font: 1.8em/100% Tillana, sans-serif;
 }
 
 h3 {
@@ -95,23 +93,29 @@ a {
 }
 
 .welcome-message {
-  font: 2.4em/100% Tillana, sans-serif;
+  font: 1.2em/100% Tillana, sans-serif;
   color: #B0BEC5;
   letter-spacing: 6px;
 }
 
 .header-role {
   color: #B0BEC5;
+  font-weight: 100;
 }
 
 hr {
-  border: 1px solid #546E7A;
+  border: 1px solid rgba(84, 110, 122, 0.26);
 }
 
 #skills-h3 {
   color: #f5ae23;
   display: none;
   font: 1.4em/100% Tillana, sans-serif;
+  margin-top: .5em;
+}
+
+#projects {
+  padding: 2em 0;
 }
 
 .orange {
@@ -124,13 +128,13 @@ hr {
 }
 
 .white-text {
-  font-weight: bold;
+  font-weight: 400;
   color: #B0BEC5;
 }
 
 .gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
+  background-color: #ECEFF1;
+  padding: 2em 0;
   clear: both;
 }
 
@@ -170,7 +174,7 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 200px;
+  width: 158px;
   display: none;
   background-color: #546E7A;
   margin-right: 0.8em;
@@ -201,9 +205,9 @@ span {
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
+  /*.biopic {
     width: 175px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 750px) {
