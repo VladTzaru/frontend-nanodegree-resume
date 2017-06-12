@@ -187,3 +187,7 @@ var projects = {
 };
 
 projects.display();
+
+
+//Footer
+$("#footerContacts").append(HTMLcontactGeneric);
