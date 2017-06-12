@@ -29,7 +29,8 @@ h1 {
   color: #f5a623;
   line-height: 48px;
   display: inline;
-  font-weight: 300;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -94,11 +95,9 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
+  font: 2.4em/100% Tillana, sans-serif;
   color: #B0BEC5;
-  line-height: 28px;
-  letter-spacing: 2px;
+  letter-spacing: 6px;
 }
 
 .header-role {
@@ -112,6 +111,7 @@ hr {
 #skills-h3 {
   color: #f5ae23;
   display: none;
+  font: 1.4em/100% Tillana, sans-serif;
 }
 
 .orange {
@@ -120,6 +120,7 @@ hr {
 
 .orange-text {
   color: #f5ae23;
+  font: 1em/100% Tillana, sans-serif;
 }
 
 .white-text {

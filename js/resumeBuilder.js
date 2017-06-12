@@ -1,3 +1,5 @@
+$("body").hide().fadeIn(1500);
+
 //Bio
 var bio = {
   name: "Vladimir Bojovic",
@@ -8,7 +10,7 @@ var bio = {
     github: "VladTzaru",
     location: "Tristram"
   },
-  welcomeMessage: "Hi! Welcome to my portfolio page.",
+  welcomeMessage: "Welcome to my resume page",
   skills: [
     "HTML",
     "CSS",
