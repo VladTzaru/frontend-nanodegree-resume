@@ -14,9 +14,7 @@ var bio = {
     "CSS",
     "JS",
     "jQuery",
-    "Git",
-    "Bootstrap",
-    "AngularJS Material"
+    "Git"
   ],
   biopic: "images/fry.jpg",
   display: function(){
