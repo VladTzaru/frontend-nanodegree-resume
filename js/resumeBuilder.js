@@ -18,29 +18,21 @@ var bio = {
   ],
   biopic: "images/fry.jpg",
   display: function(){
-    var formattedName = HTMLheaderName.replace("%data%", bio.name);
-    $("#header").append(formattedName);
+    //Header
+    var formattedName = HTMLheaderName.replace("%data%", bio.name),
+        formattedRole = HTMLheaderRole.replace("%data%", bio.role),
+        formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+        formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic),
+        formattedHeader = formattedName + formattedRole + formattedWelcomeMessage + formattedBiopic;
+    $("#header").append(formattedHeader);
 
-    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#header").append(formattedRole);
-
-    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $("#topContacts").append(formattedMobile);
-
-    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $("#topContacts").append(formattedEmail);
-
-    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#topContacts").append(formattedGithub);
-
-    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#topContacts").append(formattedLocation);
-
-    var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formattedWelcomeMessage);
-
-    var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
-    $("#header").append(formattedBiopic);
+    //TopContacts
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
+        formattedEmail = HTMLemail.replace("%data%", bio.contacts.email),
+        formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github),
+        formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location),
+        formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
+    $("#topContacts").append(formattedContacts);
 
     // Check is the Skills array empty, if not, iterate over it and append its items.
     if(bio.skills.length > 0) {
@@ -91,7 +83,20 @@ var education = {
     }
   ],
   display: function(){
-    console.log(education);
+    if(education.schools.length > 0) {
+      $("#education").append(HTMLschoolStart);
+      for(var i = 0; i < education.schools.length; i++) {
+        var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name),
+            formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location),
+            formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree),
+            formattedDates = HTMLschoolDates.replace("%data%", education.schools[i].dates),
+            formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[i].majors),
+            formattedSchools = formattedName + formattedLocation + formattedDegree + formattedDates + formattedMajors;
+        $(".education-entry:last").append(formattedSchools);
+      }
+
+
+    }
   }
 };
 
@@ -126,7 +131,7 @@ var work = {
             formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates),
             formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
             formattedWork = formattedEmployer + formattedTitle + formattedLocation + formattedDates + formattedDescription;
-            $(".work-entry:last").append(formattedWork);
+        $(".work-entry:last").append(formattedWork);
       }
     }
   }
@@ -160,6 +165,25 @@ var projects = {
     }
   ],
   display: function(){
-    console.log(projects);
+    if(projects.projects.length > 0) {
+      $("#projects").append(HTMLprojectStart);
+      for(var project = 0; project < projects.projects.length; project++) {
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title),
+            formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates),
+            formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description),
+            formattedProjects = formattedTitle + formattedDates + formattedDescription;
+        $(".project-entry:last").append(formattedProjects);
+
+        // Check is the images array empty, if not, iterate over it and append its items.
+        if(projects.projects[project].images.length > 0) {
+          for(var img = 0; img < projects.projects[project].images.length; img++) {
+            var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[img]);
+            $(".project-entry:last").append(formattedImages);
+          }
+        }
+      }
+    }
   }
 };
+
+projects.display();
