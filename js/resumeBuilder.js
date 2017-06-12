@@ -120,16 +120,13 @@ var work = {
     if (work.jobs.length > 0) {
       $("#workExperience").append(HTMLworkStart);
       for(var job = 0; job < work.jobs.length; job++) {
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        $(".work-entry:last").append(formattedEmployer);
-        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-        $(".work-entry:last").append(formattedTitle);
-        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-        $(".work-entry:last").append(formattedLocation);
-        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-        $(".work-entry:last").append(formattedDates);
-        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-        $(".work-entry:last").append(formattedDescription);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
+            formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
+            formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location),
+            formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates),
+            formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
+            formattedWork = formattedEmployer + formattedTitle + formattedLocation + formattedDates + formattedDescription;
+            $(".work-entry:last").append(formattedWork);
       }
     }
   }
