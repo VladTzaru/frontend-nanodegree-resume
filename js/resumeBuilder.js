@@ -20,9 +20,34 @@ var bio = {
   ],
   biopic: "images/fry.jpg",
   display: function(){
-    console.log(bio);
+    var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    $("#header").append(formattedName);
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    $("#header").append(formattedRole);
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    $("#topContacts").append(formattedMobile);
+    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+    $("#topContacts").append(formattedEmail);
+    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+    $("#topContacts").append(formattedGithub);
+    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+    $("#topContacts").append(formattedLocation);
+    var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formattedWelcomeMessage);
+    var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
+    $("#header").append(formattedBiopic);
+    // Check is the Skills array empty, if not, iterate over it and append its items.
+    if(bio.skills.length > 0) {
+      $("#header").append(HTMLskillsStart);
+      for(var i = 0; i < bio.skills.length; i++) {
+        var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+        $("#skills").append(formattedSkills);
+      }
+    }
   }
 };
+
+bio.display();
 
 
 //Education
