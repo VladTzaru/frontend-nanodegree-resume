@@ -8,7 +8,7 @@ var bio = {
     github: "VladTzaru",
     location: "Tristram"
   },
-  welcomeMessage: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  welcomeMessage: "Hi! Welcome to my portfolio page.",
   skills: [
     "HTML",
     "CSS",
