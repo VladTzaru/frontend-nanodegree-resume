@@ -29,6 +29,7 @@ h1 {
   color: #f5a623;
   line-height: 48px;
   display: inline;
+  font-weight: 300;
 }
 
 h2 {
@@ -95,8 +96,9 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #ECEFF1;
+  color: #B0BEC5;
   line-height: 28px;
+  letter-spacing: 2px;
 }
 
 .header-role {

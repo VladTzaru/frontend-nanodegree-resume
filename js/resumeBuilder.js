@@ -1,6 +1,6 @@
 //Bio
 var bio = {
-  name: "Tzaru",
+  name: "Vladimir Bojovic",
   role: "Frontend Developer",
   contacts: {
     mobile: "065-333-222",
