@@ -1,6 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // RESUME OBJECTS
 /////////////////////////////////////////////////////////////////////////////
+
 //Bio
 var bio = {
     name: "Vladimir Bojovic",
@@ -27,16 +28,23 @@ var bio = {
             formattedRole = HTMLheaderRole.replace("%data%", bio.role),
             formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
             formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic),
-            formattedHeader = formattedName + formattedRole + formattedWelcomeMessage + formattedBiopic;
-        $("#header").append(formattedHeader);
-
-        //TopContacts
-        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
+            formattedHeader = formattedName + formattedRole + formattedWelcomeMessage + formattedBiopic,
+            //TopContacts
+            formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
             formattedEmail = HTMLemail.replace("%data%", bio.contacts.email),
             formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github),
             formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location),
-            formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
+            formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedLocation,
+            //Footer
+            formattedGenericMobile = HTMLcontactGeneric.replace("%contact%", "mobile").replace("%data%", bio.contacts.mobile),
+            formattedGenericEmail = HTMLcontactGeneric.replace("%contact%", "email").replace("%data%", bio.contacts.email),
+            formattedGenericGithub = HTMLcontactGeneric.replace("%contact%", "github").replace("%data%", bio.contacts.github),
+            formattedGenericLocation = HTMLcontactGeneric.replace("%contact%", "location").replace("%data%", bio.contacts.location),
+            formattedContactGeneric = formattedGenericMobile + formattedGenericEmail + formattedGenericGithub + formattedGenericLocation;
+
+        $("#header").append(formattedHeader);
         $("#topContacts").append(formattedContacts);
+        $("#footerContacts").append(formattedContactGeneric);
 
         // Check is the Skills array empty, if not, iterate over it and append its items.
         if (bio.skills.length > 0) {
@@ -48,8 +56,6 @@ var bio = {
         }
     }
 };
-
-bio.display();
 
 
 //Education
@@ -103,8 +109,6 @@ var education = {
     }
 };
 
-education.display();
-
 
 //Work
 var work = {
@@ -125,7 +129,14 @@ var work = {
         {
             employer: "Davinaldo",
             title: "Frontendo",
-            location: "United Kingdom",
+            location: "London",
+            dates: "2016-2017",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+        },
+        {
+            employer: "Plasinia",
+            title: "Frontendo",
+            location: "Zagreb",
             dates: "2016-2017",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
         }
@@ -145,8 +156,6 @@ var work = {
         }
     }
 };
-
-work.display();
 
 
 //Projects
@@ -194,8 +203,6 @@ var projects = {
     }
 };
 
-projects.display();
-
 
 /////////////////////////////////////////////////////////////////////////////
 // ANIMATION CONTROL
@@ -227,14 +234,10 @@ $(window).scroll(function() {
 $("#mapDiv").append(googleMap);
 
 
-//Footer
-bio.addFooter = function() {
-    var formattedGenericMobile = HTMLcontactGeneric.replace("%contact%", "mobile").replace("%data%", bio.contacts.mobile),
-        formattedGenericEmail = HTMLcontactGeneric.replace("%contact%", "email").replace("%data%", bio.contacts.email),
-        formattedGenericGithub = HTMLcontactGeneric.replace("%contact%", "github").replace("%data%", bio.contacts.github),
-        formattedGenericLocation = HTMLcontactGeneric.replace("%contact%", "location").replace("%data%", bio.contacts.location),
-        formattedContactGeneric = formattedGenericMobile + formattedGenericEmail + formattedGenericGithub + formattedGenericLocation;
-    $("#footerContacts").append(formattedContactGeneric);
-};
-
-bio.addFooter();
+/////////////////////////////////////////////////////////////////////////////
+// INVOKING METHODS
+/////////////////////////////////////////////////////////////////////////////
+bio.display();
+work.display();
+projects.display();
+education.display();
