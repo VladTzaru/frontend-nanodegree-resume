@@ -26,6 +26,7 @@ var bio = {
         formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic),
         formattedHeader = formattedName + formattedRole + formattedWelcomeMessage + formattedBiopic;
     $("#header").append(formattedHeader).addClass("animated fadeInDown");
+    $("#header").find("img").addClass("animated rotateIn")
 
     //TopContacts
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
