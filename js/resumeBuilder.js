@@ -58,7 +58,7 @@ var education = {
   schools: [
     {
       name: "Cool school 1",
-      location: "Candyland",
+      location: "Novi Sad",
       degree: "Super",
       majors: [
         "Fire",
@@ -69,7 +69,7 @@ var education = {
     },
     {
       name: "Cool school 2",
-      location: "Mojoland",
+      location: "Cacak",
       degree: "ExtraCool",
       majors: [
         "Fire",
@@ -132,14 +132,21 @@ var work = {
     {
       employer: "Tegeto",
       title: "Frontendo",
-      location: "Rutosima",
+      location: "Belgrade",
       dates: "2015-2017",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
     },
     {
       employer: "Umpato",
       title: "Frontendo",
-      location: "Helina",
+      location: "Belgrade",
+      dates: "2016-2017",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+    },
+    {
+      employer: "Davinaldo",
+      title: "Frontendo",
+      location: "United Kingdom",
       dates: "2016-2017",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
     }
@@ -215,6 +222,7 @@ projects.display();
 /////////////////////////////////////////////////////////////////////////////
 // ANIMATION CONTROL
 /////////////////////////////////////////////////////////////////////////////
+
 $(window).scroll( function(){
 
   /* Check the location of each desired element */
@@ -238,6 +246,10 @@ $(window).scroll( function(){
 /////////////////////////////////////////////////////////////////////////////
 // OTHER DOM ELEMENTS
 /////////////////////////////////////////////////////////////////////////////
+
+//Google Map
+$("#mapDiv").append(googleMap);
+
 
 //Footer
 $("#footerContacts").append(HTMLcontactGeneric);
