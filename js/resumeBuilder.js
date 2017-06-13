@@ -60,22 +60,14 @@ var education = {
       name: "Cool school 1",
       location: "Novi Sad",
       degree: "Super",
-      majors: [
-        "Fire",
-        "Ice",
-        "Air"
-      ],
+      majors: ["Fire"],
       dates: "2030-2034"
     },
     {
       name: "Cool school 2",
       location: "Cacak",
       degree: "ExtraCool",
-      majors: [
-        "Fire",
-        "Ice",
-        "Air"
-      ],
+      majors: ["Ice"],
       dates: "2015-2020"
     }
   ],
@@ -84,12 +76,6 @@ var education = {
       title: "Frontend Nanodegree",
       school: "Udacity",
       dates: "2017",
-      url: "www.example.com"
-    },
-    {
-      title: "Fullstack Nanodegree",
-      school: "Udacity",
-      dates: "2018",
       url: "www.example.com"
     }
   ],
@@ -250,4 +236,13 @@ $("#mapDiv").append(googleMap);
 
 
 //Footer
-$("#footerContacts").append(HTMLcontactGeneric);
+bio.addFooter = function () {
+  var formattedGenericMobile = HTMLcontactGeneric.replace("%contact%", "mobile").replace("%data%", bio.contacts.mobile),
+  formattedGenericEmail = HTMLcontactGeneric.replace("%contact%", "email").replace("%data%", bio.contacts.email),
+  formattedGenericGithub = HTMLcontactGeneric.replace("%contact%", "github").replace("%data%", bio.contacts.github),
+  formattedGenericLocation = HTMLcontactGeneric.replace("%contact%", "location").replace("%data%", bio.contacts.location),
+  formattedContactGeneric = formattedGenericMobile + formattedGenericEmail + formattedGenericGithub + formattedGenericLocation;
+  $("#footerContacts").append(formattedContactGeneric);
+}
+
+bio.addFooter();

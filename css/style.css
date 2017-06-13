@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-  color: #999;
+  color: #546E7A;
   padding: 10px;
   font: 1.8em/100% Tillana, sans-serif;
   margin-bottom: 8px;
@@ -42,9 +42,10 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #78909C;
   line-height: 22px;
   margin-top: 1.5em;
+  font-weight: normal;
 }
 
 h4 {
@@ -93,7 +94,7 @@ a {
   text-decoration: none;
   margin: 10px 0;
   display: block;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .welcome-message {
@@ -122,8 +123,9 @@ hr {
   padding: 2em 0;
 }
 
-.orange {
-  background-color: #f5ae23;
+#lets-connect {
+  padding: 2em 0;
+  background-color: #37474F;
 }
 
 .orange-text {
@@ -138,12 +140,13 @@ hr {
 
 .gray {
   background-color: #ECEFF1;
-  padding: 2em 0;
   clear: both;
+  padding: 2em 0;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.school-major {
+  font-style: normal;
+  color: #37474F;
 }
 
 /* TODO: Replace with image later */
