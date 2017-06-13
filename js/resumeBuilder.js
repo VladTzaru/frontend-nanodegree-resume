@@ -1,163 +1,240 @@
-// Bio
+/////////////////////////////////////////////////////////////////////////////
+// RESUME OBJECTS
+/////////////////////////////////////////////////////////////////////////////
+//Bio
 var bio = {
-  name: "Ankou Vesta",
-  role: "Frontend developer",
-  contacts: {
-    mobile: "065-555-3333",
-    email: "name@example.com",
-    github: "VladTzaru",
-    twitter: "@vladimir",
-    location: "Novi Sad"
-  },
-  welcomeMessage: "Lorem ipsum dolor sit amet.",
-  skills: ["sleeping", "eating", "drinking", "other"],
-  bioPic: "images/fry.jpg",
-  displayBio: function() {
-    var formattedName = HTMLheaderName.replace("%data%", bio.name),
-    formattedRole = HTMLheaderRole.replace("%data%", bio.role),
-    formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic),
-    formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
-    formattedBio = formattedName + formattedRole + formattedBioPic + formattedWelcomeMsg;
-    return $("#header").append(formattedBio);
-  }
-};
-
-bio.displayBio();
-
-
-// Education
-var education = {
-  schools: [
-    {
-      name: "Faculty of Tehnical Sciences - FTN Novi Sad",
-      city: "Novi Sad",
-      degree: "Masters",
-      majors: ["E-biz", "Online marketing"],
-      dates: 2012,
-      url: "http://www.uns.ac.rs/index.php/en/faculties/ffaculties/faculty-technical-sciences"
+    name: "Vladimir Bojovic",
+    role: "Frontend Developer / Website Designer",
+    contacts: {
+        mobile: "065-333-222",
+        email: "tzaru@example.com",
+        github: "VladTzaru",
+        location: "Novi Sad"
     },
-    {
-      name: "Faculty of Tehnical Sciences - FTN Cacak",
-      city: "Cacak",
-      degree: "BA",
-      majors: ["Management", "English"],
-      dates: 2009,
-      url: "http://www.ftn.kg.ac.rs/en/"
-    }
-  ],
-  onlineCourses: [
-    {
-      title: "Frontend Nanodegree",
-      school: "Udacity",
-      dates: 2017,
-      url: "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-    }
-  ]
-};
+    welcomeMessage: "Welcome to my resume page.",
+    skills: [
+        "HTML",
+        "CSS",
+        "JS",
+        "jQuery",
+        "Git",
+        "Adobe Illustrator"
+    ],
+    biopic: "images/cartoon_vlad.jpg",
+    display: function() {
+        //Header
+        var formattedName = HTMLheaderName.replace("%data%", bio.name),
+            formattedRole = HTMLheaderRole.replace("%data%", bio.role),
+            formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+            formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic),
+            formattedHeader = formattedName + formattedRole + formattedWelcomeMessage + formattedBiopic;
+        $("#header").append(formattedHeader);
 
+        //TopContacts
+        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
+            formattedEmail = HTMLemail.replace("%data%", bio.contacts.email),
+            formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github),
+            formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location),
+            formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
+        $("#topContacts").append(formattedContacts);
 
-// Work
-var work = {
-  jobs: [
-    {
-      employer: "Tegetlab",
-      title: "Frontend Developer",
-      dates: "May 2016 - May 2017",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
-    },
-    {
-      employer: "Academica",
-      title: "Assistant program director",
-      dates: "Jan 2009- Jan 2011",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mi in mattis sollicitudin. Nullam at bibendum est, at tincidunt tellus. In lobortis a ipsum eget laoreet. Sed feugiat, urna sit amet porttitor accumsan, arcu lacus blandit ipsum, nec pellentesque metus massa ac nisl. Nulla facilisi. In sed consectetur leo."
-    }
-  ],
-  displayWork: function(obj) {
-    var output;
-    for (var job = 0; job < work.jobs.length; job++) {
-      $("#workExperience").append(HTMLworkStart);
-      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
-      formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
-      formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates),
-      formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
-      formattedJobs = formattedEmployer + formattedTitle + formattedDates + formattedDescription;
-      output = $(".work-entry:last").append(formattedJobs);
-    }
-    return output;
-  }
-};
-
-work.displayWork();
-
-// for (var job in work.jobs) {
-//   if (work.jobs.hasOwnProperty(job)) {
-//     $("#workExperience").append(HTMLworkStart);
-//     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-//     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-//     var formattedEmployerTitle = formattedEmployer + formattedTitle;
-//     $(".work-entry:last").append(formattedEmployerTitle);
-//   }
-// }
-
-
-// Projects
-var projects = {
-  projects: [
-    {
-      title: "PhiProject",
-      dates: 2016,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      images: [
-        "images/droid_flat_500_small.png",
-        "images/photoshop_500_small.jpg"
-      ]
-    },
-    {
-      title: "Taqoo",
-      dates: 2016,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      images: [
-        "images/phone_flat_500_small.jpg",
-      ]
-    }
-  ],
-  display: function() {
-    for(var project = 0; project < projects.projects.length; project++) {
-      $("#projects").append(HTMLprojectStart);
-
-      var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-      $(".project-entry:last").append(formattedTitle);
-
-      var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-      $(".project-entry:last").append(formattedDates);
-
-      var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-      $(".project-entry:last").append(formattedDescription);
-
-      //Checks the images array and iterates over it
-      if(projects.projects[project].images.length > 0) {
-        for(var img = 0; img < projects.projects[project].images.length; img++) {
-          var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[img]);
-          $(".project-entry:last").append(formattedImages);
+        // Check is the Skills array empty, if not, iterate over it and append its items.
+        if (bio.skills.length > 0) {
+            $("#header").append(HTMLskillsStart);
+            for (var i = 0; i < bio.skills.length; i++) {
+                var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+                $("#skills").append(formattedSkills);
+            }
         }
-      }
     }
-  }
+};
+
+bio.display();
+
+
+//Education
+var education = {
+    schools: [{
+            name: "Cool school 1",
+            location: "Novi Sad",
+            degree: "Super",
+            majors: ["Fire"],
+            dates: "2030-2034"
+        },
+        {
+            name: "Cool school 2",
+            location: "Cacak",
+            degree: "ExtraCool",
+            majors: ["Ice"],
+            dates: "2015-2020"
+        }
+    ],
+    onlineCourses: [{
+        title: "Frontend Nanodegree",
+        school: "Udacity",
+        dates: "2017",
+        url: "www.example.com"
+    }],
+    display: function() {
+        if (education.schools.length > 0) {
+            $("#education").append(HTMLschoolStart);
+            for (var i = 0; i < education.schools.length; i++) {
+                var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name),
+                    formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location),
+                    formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree),
+                    formattedDates = HTMLschoolDates.replace("%data%", education.schools[i].dates),
+                    formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[i].majors),
+                    formattedSchools = formattedName + formattedLocation + formattedDegree + formattedDates + formattedMajors;
+                $(".education-entry:last").append(formattedSchools);
+            }
+
+            if (education.onlineCourses.length > 0) {
+                $(".education-entry:last").append(HTMLonlineClasses);
+                for (var course = 0; course < education.onlineCourses.length; course++) {
+                    var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title),
+                        formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school),
+                        formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates),
+                        formattedUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url),
+                        formattedOnlineCourses = formattedTitle + formattedSchool + formattedOnlineDates + formattedUrl;
+                    $(".education-entry:last").append(formattedOnlineCourses);
+                }
+            }
+        }
+    }
+};
+
+education.display();
+
+
+//Work
+var work = {
+    jobs: [{
+            employer: "Tegeto",
+            title: "Frontendo",
+            location: "Belgrade",
+            dates: "2015-2017",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+        },
+        {
+            employer: "Umpato",
+            title: "Frontendo",
+            location: "Belgrade",
+            dates: "2016-2017",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+        },
+        {
+            employer: "Davinaldo",
+            title: "Frontendo",
+            location: "United Kingdom",
+            dates: "2016-2017",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+        }
+    ],
+    display: function() {
+        if (work.jobs.length > 0) {
+            $("#workExperience").append(HTMLworkStart);
+            for (var job = 0; job < work.jobs.length; job++) {
+                var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
+                    formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
+                    formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location),
+                    formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates),
+                    formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
+                    formattedWork = formattedEmployer + formattedTitle + formattedLocation + formattedDates + formattedDescription;
+                $(".work-entry:last").append(formattedWork);
+            }
+        }
+    }
+};
+
+work.display();
+
+
+//Projects
+var projects = {
+    projects: [{
+            title: "Umpa",
+            dates: "2015-2016",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim.",
+            images: [
+                "images/project_1.png",
+                "images/project_2.png",
+                "images/project_3.png"
+            ]
+        },
+        {
+            title: "Ekpa",
+            dates: "2015-2016",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            images: [
+                "images/phone_flat_500_small.jpg",
+                "images/photoshop_500_small.jpg",
+                "images/droid_flat_500_small.png"
+            ]
+        }
+    ],
+    display: function() {
+        if (projects.projects.length > 0) {
+            $("#projects").append(HTMLprojectStart);
+            for (var project = 0; project < projects.projects.length; project++) {
+                var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title),
+                    formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates),
+                    formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description),
+                    formattedProjects = formattedTitle + formattedDates + formattedDescription;
+                $(".project-entry:last").append(formattedProjects);
+
+                // Check is the images array empty, if not, iterate over it and append its items.
+                if (projects.projects[project].images.length > 0) {
+                    for (var img = 0; img < projects.projects[project].images.length; img++) {
+                        var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[img]);
+                        $(".project-entry:last").append(formattedImages);
+                    }
+                }
+            }
+        }
+    }
 };
 
 projects.display();
 
 
-////////////////////////////////////////////////////////////////////////////////////////
-// Functions
-////////////////////////////////////////////////////////////////////////////////////////
-$("#main").append(internationalizeButton);
+/////////////////////////////////////////////////////////////////////////////
+// ANIMATION CONTROL
+/////////////////////////////////////////////////////////////////////////////
 
-// Function for internationalize
-function inName(name) {
-  name = name.split(" ");
-  name[1] = name[1].toUpperCase();
-  name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
-  name = name.join(" ");
-  return name;
-}
+$(window).scroll(function() {
+
+    /* Check the location of each desired element */
+    $(".hideMe").each(function() {
+
+        var bottomObj = $(this).offset().top + $(this).outerHeight();
+        var botOfWindow = $(window).scrollTop() + $(window).height();
+
+        /* If the object is completely visible in the window, fade it in */
+        if (botOfWindow > bottomObj) {
+            $(this).toggleClass("hideMe").addClass("animated fadeInUp");
+        }
+
+    });
+
+});
+
+
+/////////////////////////////////////////////////////////////////////////////
+// OTHER DOM ELEMENTS
+/////////////////////////////////////////////////////////////////////////////
+
+//Google Map
+$("#mapDiv").append(googleMap);
+
+
+//Footer
+bio.addFooter = function() {
+    var formattedGenericMobile = HTMLcontactGeneric.replace("%contact%", "mobile").replace("%data%", bio.contacts.mobile),
+        formattedGenericEmail = HTMLcontactGeneric.replace("%contact%", "email").replace("%data%", bio.contacts.email),
+        formattedGenericGithub = HTMLcontactGeneric.replace("%contact%", "github").replace("%data%", bio.contacts.github),
+        formattedGenericLocation = HTMLcontactGeneric.replace("%contact%", "location").replace("%data%", bio.contacts.location),
+        formattedContactGeneric = formattedGenericMobile + formattedGenericEmail + formattedGenericGithub + formattedGenericLocation;
+    $("#footerContacts").append(formattedContactGeneric);
+};
+
+bio.addFooter();
