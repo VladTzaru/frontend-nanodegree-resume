@@ -43,6 +43,7 @@ h3 {
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  margin-top: 1.5em;
 }
 
 h4 {
@@ -53,7 +54,6 @@ h4 {
 }
 
 h2,
-h3,
 h4,
 h5 {
   padding: 10px 5%;
@@ -64,7 +64,7 @@ h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #90A4AE;
   line-height: 16px;
   float: left;
 }
@@ -72,23 +72,27 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #90A4AE;
   line-height: 16px;
   float: right;
+}
 
+.hideMe {
+  opacity: 0;
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+  font-size: 1em;
+  color: #37474F;
+  line-height: 22px;
 }
 
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+  margin: 10px 0;
   display: block;
+  font-size: 1.2em;
 }
 
 .welcome-message {
@@ -205,7 +209,7 @@ span {
 
 @media only screen and (max-width:900px) {
   /*.biopic {
-    width: 175px;
+  width: 175px;
   }*/
 }
 
