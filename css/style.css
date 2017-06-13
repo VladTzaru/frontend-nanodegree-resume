@@ -230,6 +230,8 @@ span {
   display: block;
   height: 100%;
   margin: 0 5%;
+  border: 2px solid #90A4AE;
+  border-radius: 4px;
 }
 
 #mapDiv {

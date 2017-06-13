@@ -233,9 +233,7 @@ $(window).scroll( function(){
 
     /* If the object is completely visible in the window, fade it in */
     if( botOfWindow > bottomObj ){
-
       $(this).toggleClass("hideMe").addClass("animated fadeInUp");
-
     }
 
   });
