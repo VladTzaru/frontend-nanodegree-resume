@@ -29,22 +29,15 @@ var bio = {
             formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
             formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic),
             formattedHeader = formattedName + formattedRole + formattedWelcomeMessage + formattedBiopic,
-            //TopContacts
+            //TopContacts & Footer contacts
             formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
             formattedEmail = HTMLemail.replace("%data%", bio.contacts.email),
             formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github),
             formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location),
-            formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedLocation,
-            //Footer
-            formattedGenericMobile = HTMLcontactGeneric.replace("%contact%", "mobile").replace("%data%", bio.contacts.mobile),
-            formattedGenericEmail = HTMLcontactGeneric.replace("%contact%", "email").replace("%data%", bio.contacts.email),
-            formattedGenericGithub = HTMLcontactGeneric.replace("%contact%", "github").replace("%data%", bio.contacts.github),
-            formattedGenericLocation = HTMLcontactGeneric.replace("%contact%", "location").replace("%data%", bio.contacts.location),
-            formattedContactGeneric = formattedGenericMobile + formattedGenericEmail + formattedGenericGithub + formattedGenericLocation;
+            formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
 
         $("#header").append(formattedHeader);
-        $("#topContacts").append(formattedContacts);
-        $("#footerContacts").append(formattedContactGeneric);
+        $("#topContacts, #footerContacts").append(formattedContacts);
 
         // Check is the Skills array empty, if not, iterate over it and append its items.
         if (bio.skills.length > 0) {
