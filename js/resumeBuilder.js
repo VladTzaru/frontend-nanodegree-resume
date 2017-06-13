@@ -29,7 +29,7 @@ var bio = {
     formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
     formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic),
     formattedHeader = formattedName + formattedRole + formattedWelcomeMessage + formattedBiopic;
-    $("#header").append(formattedHeader).addClass("animated fadeInDown");
+    $("#header").append(formattedHeader);
 
     //TopContacts
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
@@ -153,7 +153,7 @@ var work = {
   ],
   display: function(){
     if (work.jobs.length > 0) {
-      $("#workExperience").append(HTMLworkStart).addClass("animated slideInLeft");
+      $("#workExperience").append(HTMLworkStart);
       for(var job = 0; job < work.jobs.length; job++) {
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
         formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
@@ -178,9 +178,9 @@ var projects = {
       dates: "2015-2016",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       images: [
-        "images/phone_flat_500_small.jpg",
-        "images/photoshop_500_small.jpg",
-        "images/droid_flat_500_small.png"
+        "images/project_1.png",
+        "images/project_2.png",
+        "images/project_3.png"
       ]
     },
     {
