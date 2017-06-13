@@ -1,5 +1,3 @@
-$("body").hide().fadeIn(1500);
-
 //Bio
 var bio = {
   name: "Vladimir Bojovic",
@@ -27,7 +25,7 @@ var bio = {
         formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
         formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic),
         formattedHeader = formattedName + formattedRole + formattedWelcomeMessage + formattedBiopic;
-    $("#header").append(formattedHeader);
+    $("#header").append(formattedHeader).addClass("animated fadeInDown");
 
     //TopContacts
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
@@ -126,7 +124,7 @@ var work = {
   ],
   display: function(){
     if (work.jobs.length > 0) {
-      $("#workExperience").append(HTMLworkStart);
+      $("#workExperience").append(HTMLworkStart).addClass("animated slideInLeft");
       for(var job = 0; job < work.jobs.length; job++) {
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
             formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
