@@ -162,7 +162,7 @@ var projects = {
     {
       title: "Umpa",
       dates: "2015-2016",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim.",
       images: [
         "images/project_1.png",
         "images/project_2.png",
