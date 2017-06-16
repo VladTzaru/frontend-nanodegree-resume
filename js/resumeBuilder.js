@@ -106,24 +106,30 @@ var education = {
 //Work
 var work = {
     jobs: [{
-            employer: "Tegeto",
-            title: "Frontendo",
+            employer: "Tegetlab",
+            title: "Frontend Developer",
             location: "Belgrade",
-            dates: "2015-2017",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+            dates: "May 2016 - May 2017",
+            description: "Our team is the creator of the Phi Project. Phi is a web app for delivering fast, precise, and relevant advertising experience in close partnership with leading Out of Home advertising agencies, location owners, and brands who advertise. Phi Project is a new way to let PEOPLE know about your offer. It is about permission marketing. It is about simple communication. It is about relevance and performance. Phi enables advertisers to focus communication to audiences and individuals who matter for their success. On the other hand, people receive geo relevant ads that create value in line with their needs. Phi brings the two worlds together and creates benefits for the ad viewers and revenues for the advertisers.",
+            workResponsibilities: [
+                "Develop new user-facing features",
+                "Desing wireframes/mockups",
+                "Ensure the technical feasibility of UI/UX designs",
+                "Collaborate with other team members and stakeholders"
+            ]
         },
         {
-            employer: "Umpato",
-            title: "Frontendo",
+            employer: "Academica Group",
+            title: "Program Assistant Director",
             location: "Belgrade",
-            dates: "2016-2017",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+            dates: "Jan 2011- May 2013",
+            description: "Academica Group is an expert association developing autonomous and sustainable programs as open platforms for community and creativity mobilisation and synergistic activities of the citizens sharing similar beliefs and need for social engagement. Since 2000, Academica has initiated and successfully implemented more than 200 projects and significant initiatives in cultural policies, creative economy, contemporary art practices and public policies (social policy, urban regeneration, youth policy, public sector reforms). Academica combines activities of a think tank with that of a research and development association. It is a key association in Serbia that comprehensively deals with the cultural economy. Comprising development platforms related to the creative industries, it brings together experts in humanities, social and applied sciences along with artists and creative individuals aiming to influence both cultural policy and the general public. Academica Group designs and implements research, development, capacity building and production programs intended to serve as platforms for the development of strategic themes, thinking and research relative to the creative sector."
         },
         {
             employer: "Davinaldo",
-            title: "Frontendo",
+            title: "Frontend Developer / Composer",
             location: "London",
-            dates: "2016-2017",
+            dates: "Ongoing...",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
         },
         {
@@ -154,9 +160,9 @@ var work = {
 //Projects
 var projects = {
     projects: [{
-            title: "Umpa",
-            dates: "2015-2016",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim.",
+            title: "Phi Project",
+            dates: "May 2016 - May 2017",
+            description: "Phi web app creates and delivers fast, precise, and relevant mobile advertising in close partnership with leading Out of Home advertising agencies, location owners, and brands. Advertisers are able to engage audiences and individuals that matter, whereas people receive geo-relevant ads that create added value.",
             images: [
                 "images/project_1.png",
                 "images/project_2.png",
@@ -164,8 +170,8 @@ var projects = {
             ]
         },
         {
-            title: "Ekpa",
-            dates: "2015-2016",
+            title: "Taqoo",
+            dates: "May 2016 - May 2017",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             images: [
                 "images/phone_flat_500_small.jpg",
