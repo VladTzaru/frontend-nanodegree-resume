@@ -62,13 +62,6 @@ h5 {
 }
 
 .banner-img {
-  background:
-  linear-gradient(
-    rgba(46, 61, 73, .4),
-    rgba(46, 61, 73, .4)
-    ),
-  url(http://1onjea25cyhx3uvxgs4vu325.wpengine.netdna-cdn.com/wp-content/uploads/2016/03/cropped-chalkboard-image.jpg);
-  background-position: center;
   background-color: #27252a;
   background-size: cover;
 }
