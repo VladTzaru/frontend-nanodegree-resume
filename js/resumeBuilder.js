@@ -4,22 +4,22 @@
 
 //Bio
 var bio = {
-    name: "Vladimir Bojovic",
-    role: "Frontend Developer / Website Designer",
+    name: "Johnny Macaroni",
+    role: "Chocolate Beer Specialist",
     contacts: {
         mobile: "065-333-222",
-        email: "tzaru@example.com",
-        github: "VladTzaru",
-        location: "Novi Sad"
+        email: "johnny@example.com",
+        github: "JohnnyMC",
+        location: "Hazardville"
     },
     welcomeMessage: "Welcome to my resume page.",
     skills: [
-        "HTML",
-        "CSS",
-        "JS",
-        "jQuery",
-        "Git",
-        "Adobe Illustrator"
+        "Willing to be big spoon or little spoon",
+        "Very reliable for giving rides to / from the airport",
+        "Listens attentively to boring stories",
+        "Showers regularly",
+        "Is not racist",
+        "Gives sincere apologies"
     ],
     biopic: "images/cartoon_vlad.jpg",
     display: function() {
@@ -55,22 +55,22 @@ var bio = {
 var education = {
     schools: [{
             name: "Cool school 1",
-            location: "Novi Sad",
-            degree: "Super",
-            majors: ["Fire"],
-            dates: "2030-2034"
+            location: "China",
+            degree: "Super-duper",
+            majors: ["CANNABIS CULTIVATION", "FERMENTATION SCIENCES", "FLORAL MANAGEMENT"],
+            dates: "2010-2015"
         },
         {
             name: "Cool school 2",
-            location: "Cacak",
-            degree: "ExtraCool",
-            majors: ["Ice"],
-            dates: "2015-2020"
+            location: "North Korea",
+            degree: "Ballistic Missile Defense Intelligence Analyst",
+            majors: ["BOMB DISPOSAL"],
+            dates: "2010-2015"
         }
     ],
     onlineCourses: [{
-        title: "Frontend Nanodegree",
-        school: "Udacity",
+        title: "European Witchcraft",
+        school: "McJunkin",
         dates: "2017",
         url: "www.example.com"
     }],
@@ -106,38 +106,32 @@ var education = {
 //Work
 var work = {
     jobs: [{
-            employer: "Tegetlab",
-            title: "Frontend Developer",
-            location: "Belgrade",
-            dates: "May 2016 - May 2017",
-            description: "Our team is the creator of the Phi Project. Phi is a web app for delivering fast, precise, and relevant advertising experience in close partnership with leading Out of Home advertising agencies, location owners, and brands who advertise. Phi Project is a new way to let PEOPLE know about your offer. It is about permission marketing. It is about simple communication. It is about relevance and performance. Phi enables advertisers to focus communication to audiences and individuals who matter for their success. On the other hand, people receive geo relevant ads that create value in line with their needs. Phi brings the two worlds together and creates benefits for the ad viewers and revenues for the advertisers.",
-            workResponsibilities: [
-                "Develop new user-facing features",
-                "Desing wireframes/mockups",
-                "Ensure the technical feasibility of UI/UX designs",
-                "Collaborate with other team members and stakeholders"
-            ]
+            employer: "Bai Brands",
+            title: "Chief Flavor Officer",
+            location: "Mexico",
+            dates: "Jan 2000 - May 2005",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, rutrum ornare rutrum quis, vestibulum ut libero. Etiam egestas finibus porttitor. Nullam tincidunt lacus at quam egestas lacinia. Integer vitae nunc libero. Nam ornare dignissim augue, hendrerit tincidunt odio euismod non. Integer consequat, ligula sit amet rutrum ultrices, est nisl efficitur enim, id egestas velit mauris ac dui. Integer tristique ultricies lacus, in accumsan mauris fringilla at. Nullam auctor rutrum metus. Nulla ut neque quis massa placerat vehicula. Vivamus vel efficitur odio, eu vestibulum ipsum. Nullam id luctus nunc, et consectetur ante. Nullam facilisis ipsum eu leo molestie, ac lacinia ex imperdiet. Donec rhoncus vel leo sit amet lobortis. Ut posuere enim sed orci elementum commodo.",
         },
         {
-            employer: "Academica Group",
-            title: "Program Assistant Director",
-            location: "Belgrade",
+            employer: "Microsoft",
+            title: "Galactic Viceroy of Research Excellence",
+            location: "Chicago",
             dates: "Jan 2011- May 2013",
-            description: "Academica Group is an expert association developing autonomous and sustainable programs as open platforms for community and creativity mobilisation and synergistic activities of the citizens sharing similar beliefs and need for social engagement. Since 2000, Academica has initiated and successfully implemented more than 200 projects and significant initiatives in cultural policies, creative economy, contemporary art practices and public policies (social policy, urban regeneration, youth policy, public sector reforms). Academica combines activities of a think tank with that of a research and development association. It is a key association in Serbia that comprehensively deals with the cultural economy. Comprising development platforms related to the creative industries, it brings together experts in humanities, social and applied sciences along with artists and creative individuals aiming to influence both cultural policy and the general public. Academica Group designs and implements research, development, capacity building and production programs intended to serve as platforms for the development of strategic themes, thinking and research relative to the creative sector."
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, rutrum ornare rutrum quis, vestibulum ut libero. Etiam egestas finibus porttitor. Nullam tincidunt lacus at quam egestas lacinia. Integer vitae nunc libero. Nam ornare dignissim augue, hendrerit tincidunt odio euismod non. Integer consequat, ligula sit amet rutrum ultrices, est nisl efficitur enim, id egestas velit mauris ac dui. Integer tristique ultricies lacus, in accumsan mauris fringilla at. Nullam auctor rutrum metus. Nulla ut neque quis massa placerat vehicula. Vivamus vel efficitur odio, eu vestibulum ipsum. Nullam id luctus nunc, et consectetur ante. Nullam facilisis ipsum eu leo molestie, ac lacinia ex imperdiet. Donec rhoncus vel leo sit amet lobortis. Ut posuere enim sed orci elementum commodo."
         },
         {
-            employer: "Davinaldo",
-            title: "Frontend Developer / Composer",
+            employer: "Tumblr",
+            title: "Fashion Evangelist",
             location: "London",
             dates: "Ongoing...",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, rutrum ornare rutrum quis, vestibulum ut libero. Etiam egestas finibus porttitor. Nullam tincidunt lacus at quam egestas lacinia. Integer vitae nunc libero. Nam ornare dignissim augue, hendrerit tincidunt odio euismod non. Integer consequat, ligula sit amet rutrum ultrices, est nisl efficitur enim, id egestas velit mauris ac dui. Integer tristique ultricies lacus, in accumsan mauris fringilla at. Nullam auctor rutrum metus. Nulla ut neque quis massa placerat vehicula. Vivamus vel efficitur odio, eu vestibulum ipsum. Nullam id luctus nunc, et consectetur ante. Nullam facilisis ipsum eu leo molestie, ac lacinia ex imperdiet. Donec rhoncus vel leo sit amet lobortis. Ut posuere enim sed orci elementum commodo."
         },
         {
-            employer: "Plasinia",
-            title: "Frontendo",
-            location: "Zagreb",
+            employer: "Google",
+            title: "In-House Philosopher",
+            location: "India",
             dates: "2016-2017",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl velit, sollicitudin vitae velit eu, imperdiet malesuada ipsum. Maecenas volutpat ut enim ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam in mauris non arcu condimentum fringilla at at enim. Nullam rutrum tempor ante, id egestas erat condimentum ut. Nam massa velit, scelerisque sed egestas at, convallis ut enim."
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, rutrum ornare rutrum quis, vestibulum ut libero. Etiam egestas finibus porttitor. Nullam tincidunt lacus at quam egestas lacinia. Integer vitae nunc libero. Nam ornare dignissim augue, hendrerit tincidunt odio euismod non. Integer consequat, ligula sit amet rutrum ultrices, est nisl efficitur enim, id egestas velit mauris ac dui. Integer tristique ultricies lacus, in accumsan mauris fringilla at. Nullam auctor rutrum metus. Nulla ut neque quis massa placerat vehicula. Vivamus vel efficitur odio, eu vestibulum ipsum. Nullam id luctus nunc, et consectetur ante. Nullam facilisis ipsum eu leo molestie, ac lacinia ex imperdiet. Donec rhoncus vel leo sit amet lobortis. Ut posuere enim sed orci elementum commodo."
         }
     ],
     display: function() {
@@ -160,9 +154,9 @@ var work = {
 //Projects
 var projects = {
     projects: [{
-            title: "Phi Project",
+            title: "Maximum Mustard",
             dates: "May 2016 - May 2017",
-            description: "Phi web app creates and delivers fast, precise, and relevant mobile advertising in close partnership with leading Out of Home advertising agencies, location owners, and brands. Advertisers are able to engage audiences and individuals that matter, whereas people receive geo-relevant ads that create added value.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, rutrum ornare rutrum quis, vestibulum ut libero. Etiam egestas finibus porttitor. Nullam tincidunt lacus at quam egestas lacinia. Integer vitae nunc libero. Nam ornare dignissim augue, hendrerit tincidunt odio euismod non. Integer consequat, ligula sit amet rutrum ultrices, est nisl efficitur enim, id egestas velit mauris ac dui. Integer tristique ultricies lacus, in accumsan mauris fringilla at. Nullam auctor rutrum metus. Nulla ut neque quis massa placerat vehicula. Vivamus vel efficitur odio, eu vestibulum ipsum. Nullam id luctus nunc, et consectetur ante. Nullam facilisis ipsum eu leo molestie, ac lacinia ex imperdiet. Donec rhoncus vel leo sit amet lobortis. Ut posuere enim sed orci elementum commodo.",
             images: [
                 "images/project_1.png",
                 "images/project_2.png",
@@ -170,8 +164,8 @@ var projects = {
             ]
         },
         {
-            title: "Taqoo",
-            dates: "May 2016 - May 2017",
+            title: "Bitter Lobster",
+            dates: "May 2012- May 2014",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             images: [
                 "images/phone_flat_500_small.jpg",
